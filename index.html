@@ -35,7 +35,7 @@
     <main>
         <section class="hero hero-photo">
             <h1 class="hero-title">Effective Solutions  for Your Business</h1>
-            <button type="button" class="button-hero">Order Service</button>
+            <button type="button" class="button-hero"data-modal-open>Order Service</button>
        </section>
           <!--Sections-->
         <section class="top">
@@ -336,9 +336,17 @@
         </ul>
       </div>
     </div>
-    
     </div>
-    </footer>    
+    <div class="backdrop is-hidden" data-modal>
+     <div class="modal">
+      <button type="button" class="modal-close-btn" data-modal-close></button>
+      <svg  class="modal-close-btn-icon" width="8" hidden="8">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+     </div>
+    </div>
+    </footer>
+    <script src="./js/modal.js"></script>    
     </body>
     </html>
 

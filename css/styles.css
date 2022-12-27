@@ -583,6 +583,42 @@ width: 360px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     
 }
+.fotolist {
+    position: relative;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0,100%);
+    transition: transform 250ms linear;
+
+    font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.02em;
+color: #F4F4FD;
+
+padding-top: 40px;
+padding-bottom: 164px;
+padding-left: 32px;
+padding-right: 32px;
+background:  
+rgba(77, 90, 229, 0.5)
+
+}
+
+.fotolist:hover .overlay-text,
+.fotolist:focus .overlay-text {
+    transform: translate(0, 0%);
+}
+
+.imges {
+    position: relative; 
+    overflow: hidden;
+}
 
 
 .right {
@@ -697,3 +733,49 @@ color: #8E8F99;
 
 
 } 
+/*********************Model Window***********************/
+
+.backdrop {
+position: fixed;
+z-index: 100;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(46, 47, 66, 0.4);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 576px;
+    left: 516px;
+    top: 88px;
+    
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.modal-close-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0; 
+}
+
+.modal-close-btn-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+}
